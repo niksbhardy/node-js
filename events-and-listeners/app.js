@@ -50,3 +50,9 @@ greeter1.removeListener('greet', callbackA);
 // 1 listener has been removed now
 console.log("Listeners after removal: " + EventEmitter.listenerCount(greeter1, 'greet'));
 greeter1.greet('John');
+
+//removing listener B
+greeter1.removeListener('greet', callbackB);
+
+console.log("No listeners: " + EventEmitter.listenerCount(greeter1, 'greet'));
+greeter1.greet('John');
